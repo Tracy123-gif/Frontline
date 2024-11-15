@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar from '../components/navbar';
 import image from '../assets/images/worship.jpeg';
 import MapSection from '../components/MapSection';
 
