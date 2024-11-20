@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { FiX } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
+import  img  from '../assets/images/logo.jpeg'
 
 const Navbar = () => {
   const [drop, setDrop] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="z-30 navbar flex justify-between items-center w-full px-6 py-4 bg-black bg-opacity-50 text-white fixed top-0 left-0">
-      <div className="logo text-xl font-bold"></div>
+      <div className="logo text-xl font-bold"><img src={img} alt="" className='z-40 w-12 rounded-full' /></div>
 
       {/* Burger Icon for Mobile Menu */}
       <div className="burgerIcon md:hidden z-20">

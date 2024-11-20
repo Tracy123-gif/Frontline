@@ -21,7 +21,7 @@ const Contacts = () => {
             You can email us directly by clicking the button below. We’ll get back to you as soon as possible!
           </p>
           <a
-            href="mailto:contact@thefrontlinechurch.com?subject=Your Subject&body=Write your message here..."
+            href="mailto:th1044225@gnail.com?subject=CGMI frontline church message&body=Write your message here..."
             className="w-full inline-block bg-blue-500 text-white py-3 rounded-lg text-center hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
           >
             Email Us

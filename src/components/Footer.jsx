@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div>
-        <div className="footer mt-72 bg-blue-500 w-screen py-14 px-16 text-white">
+        <div className="footer bg-blue-500 w-screen py-14 px-16 text-white">
         <div className="footerContent max-w-7xl mx-auto flex flex-wrap justify-between gap-8">
           {/* Left Section */}
           <div className="left w-full md:w-1/2">
