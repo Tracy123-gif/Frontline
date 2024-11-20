@@ -1,23 +1,68 @@
-import React from 'react'
-import image from '../assets/images/worship.jpeg'
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 const About = () => {
+  const boxRefs = useRef([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(boxRefs.current, {
+        x: (index) => (index % 2 === 0 ? -100 : 100), // Alternate left/right animation
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "power2.out",
+      });
+    });
+
+    return () => ctx.revert(); // Cleanup on unmount
+  }, []);
+
   return (
-    <div>
-       <div className='hero relative w-screen '>
-        <div className="container">
-          <img src={image} alt="" className='absolute object-cover h-full w-full top-0 left-0 -z-10' />
+    <div className="about-page bg-white text-blue-500 min-h-screen py-16 px-8">
+      <div className="max-w-7xl mx-auto text-center mb-12">
+        <h1 className="text-4xl font-bold uppercase">About Us</h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Learn more about The Frontline Church, our mission, and how to find us.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Box 1 */}
+        <div
+          ref={(el) => (boxRefs.current[0] = el)}
+          className="box bg-white shadow-lg rounded-lg p-6 border border-gray-200"
+        >
+          <h2 className="text-xl font-bold mb-4">The Frontline Church</h2>
+          <p className="text-gray-600">
+            We are a community dedicated to evangelizing for the lost and transforming lives spiritually, mentally, and physically. Our church welcomes everyone to grow in faith and leadership.
+          </p>
         </div>
-        <div className="textContent relative -top-11 flex flex-col justify-center items-center h-full gap-10">
-          <h1 className='text-6xl font-bold text-white opacity-85 text-center max-sm:text-5xl '>The Frontline Church</h1>
-          <p className='w-1/2 mx-auto text-center text-white max-sm:text-base '>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eum perspiciatis autem aperiam harum aspernatur a placeat sint, nesciunt et quidem at amet quisquam deserunt sunt recusandae dicta, porro enim?
+
+        {/* Box 2 */}
+        <div
+          ref={(el) => (boxRefs.current[1] = el)}
+          className="box bg-white shadow-lg rounded-lg p-6 border border-gray-200"
+        >
+          <h2 className="text-xl font-bold mb-4">Our Mission</h2>
+          <p className="text-gray-600">
+            To bring total transformation to individuals by leading them to Christ and nurturing their potential to become leaders in their communities.
+          </p>
+        </div>
+
+        {/* Box 3 */}
+        <div
+          ref={(el) => (boxRefs.current[2] = el)}
+          className="box bg-white shadow-lg rounded-lg p-6 border border-gray-200"
+        >
+          <h2 className="text-xl font-bold mb-4">Find Us</h2>
+          <p className="text-gray-600">
+            Visit us at 123 Church Street, Faith City, FG 56789, or connect with us through our contact page. We look forward to meeting you!
           </p>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image from '../assets/images/worship.jpeg';
 import MapSection from '../components/MapSection';
+import { Link } from 'react-router-dom'
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +15,7 @@ const Home = () =>  {
   const mapRef = useRef(null);
   const eventsRef = useRef(null);
   const contactRef = useRef(null);
-  const footerRef = useRef(null);
+
 
   useEffect(() => {
     // Define the fade in and out animations for each section
@@ -23,7 +25,6 @@ const Home = () =>  {
       { ref: mapRef, from: { x: -100, opacity: 0 }, to: { x: 0, opacity: 1 } },
       { ref: eventsRef, from: { x: 100, opacity: 0 }, to: { x: 0, opacity: 1 } },
       { ref: contactRef, from: { x: -100, opacity: 0 }, to: { x: 0, opacity: 1 } },
-      { ref: footerRef, from: { x: 100, opacity: 0 }, to: { x: 0, opacity: 1 } },
     ];
 
     sections.forEach((section) => {
@@ -45,17 +46,21 @@ const Home = () =>  {
     });
   }, []);
 
+
+  
+
   return (
-    <div className='overflow-x-hidden z-10'>
+    <div className='overflow-hidden '>
       {/* hero section */}
-      <div ref={heroRef} className='hero relative w-screen '>
-        <div className="container">
+      <div ref={heroRef} className='z-30 hero relative w-screen '>
+        <div className="container ">
+          <div className='bg-black bg-opacity-45 w-full h-full z-30 absolute top-0 left-0 '></div>
           <img src={image} alt="" className='absolute object-cover h-full w-full top-0 left-0 -z-10' />
         </div>
-        <div className="textContent relative -top-11 flex flex-col justify-center items-center h-full gap-10">
+        <div className="textContent relative -top-11 flex flex-col justify-center items-center h-full gap-10 relatvive z-50">
           <h1 className='text-6xl font-bold text-white opacity-85 text-center max-sm:text-5xl '>The Frontline Church</h1>
           <p className='w-1/2 mx-auto text-center text-white max-sm:text-base '>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eum perspiciatis autem aperiam harum aspernatur a placeat sint, nesciunt et quidem at amet quisquam deserunt sunt recusandae dicta, porro enim?
+           Evangelizing for the lost fro the total transformation of the spirit, sould and body, developing them into leaders
           </p>
         </div>
       </div>
@@ -65,8 +70,7 @@ const Home = () =>  {
         <h1 className='text-4xl uppercase font-medium'>Join Us for Service</h1>
         <p>Sundays - 8:30am & 10:00am</p>
         <div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error quia eos sunt mollitia, praesentium vero voluptatem dolore</p>
-          <p>laudantium. Tempora aliquam commodi debitis nam quod animi quis!</p>
+          <p>   Every sunday we have morning services, 1st service from 7:30 to 9am, 2nd service from 9am to 11am</p>
         </div>
       </div>
 
@@ -76,7 +80,7 @@ const Home = () =>  {
       </div>
 
       {/* events section */}
-      <div ref={eventsRef} className='events m-32 my-52 flex max:flex-wrap gap-8 p-8 sm:mx-3 max-sm:flex-col max-sm:w-screen justify-center items-center mx-auto'>
+    {/* <div ref={eventsRef} className='events m-32 my-52 flex max:flex-wrap gap-8 p-8 sm:mx-3 max-sm:flex-col max-sm:w-screen justify-center items-center mx-auto'> 
         <div className="event shadow-lg bg-slate-100 p-11 rounded-md max-sm:w-full">
           <p className="eventPreview">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, cumque accusantium suscipit vero minus architecto voluptatem ut tempore consequatur possimus!
@@ -89,32 +93,20 @@ const Home = () =>  {
           </p>
           <button className='eventCta text-white bg-blue-500 px-10 py-4 rounded-full mt-10 drop-shadow-2xl shadow-2xl border-black border-2 border-opacity-50'>Future Events</button>
         </div>
-      </div>
+      </div> */}
 
       {/* contact section */}
-      <div ref={contactRef} className="h-96 w-screen mb-20 p-20 max-sm:py-20 max-sm:px-0">
-        <div className="content flex flex-col items-center bg-slate-100 over">
+      <div ref={contactRef} className=" w-screen mb-20 p-20 max-sm:py-20 max-sm:px-0">
+        <div className="content flex flex-col items-center bg-slate-100 h-fit">
           <h1 className='heading font-bold text-3xl text-center my-20 pt-9'>Send Us A Message</h1>
-          <p className='text-center font-medium w-4/5 mx-auto'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia, temporibus facere assumenda, id qui quasi nam accusamus perspiciatis dolore illo obcaecati magnam consequatur sed non consequuntur fugit repudiandae alias.
+          <p className='text-center font-medium w-4/5 mx-auto '>
+          send us an email for any inquiries, whether you have questions about our church services, upcoming events, or ministry programs. If you’re seeking spiritual guidance, prayer, or simply someone to talk to, our team is here to support you.
           </p>
-          <button className='mb-10 bg-blue-500 px-10 py-4 rounded-full mt-10 drop-shadow-2xl shadow-2xl border-black border-2 border-opacity-50'>Contact Us</button>
+          <button className='mb-10 bg-blue-500 px-10 py-4 rounded-full mt-10 drop-shadow-2xl shadow-2xl border-black border-2 border-opacity-50 '><Link to={'/contact'}>Contact us</Link></button>
         </div>
       </div>
 
-      {/* footer section */}
-      <div ref={footerRef} className='footer mt-72 bg-blue-500 h-96 w-screen py-14 px-16 text-white mb-0'>
-        <div className="footentContent flex justify-center gap-10 md:flex-wrap">
-          <div className="left">
-            <h1 className="heading text-3xl uppercase">The Frontline Church</h1>
-            {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
-          </div>
-          <div className="right cta flex gap-10">
-            <button className='py-4 px-8 rounded-full bg-white text-black border-2 shadow-lg drop-shadow-2xl'>Contact Us</button>
-            <button className='py-4 px-8 rounded-full bg-white text-black border-2 shadow-lg drop-shadow-2xl'>Learn More</button> */}
-          </div>
-        </div>
-      </div>
+    
     </div>
   );
 }

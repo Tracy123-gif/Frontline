@@ -11,8 +11,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="z-10 navbar flex justify-between items-center w-full px-6 py-4 bg-black bg-opacity-50 text-white fixed top-0 left-0">
-      <div className="logo text-xl font-bold">Logo</div>
+    <div className="z-30 navbar flex justify-between items-center w-full px-6 py-4 bg-black bg-opacity-50 text-white fixed top-0 left-0">
+      <div className="logo text-xl font-bold"></div>
 
       {/* Burger Icon for Mobile Menu */}
       <div className="burgerIcon md:hidden z-20">
