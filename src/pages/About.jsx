@@ -20,7 +20,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about-page bg-white text-blue-500 min-h-screen py-16 px-8">
+    <div className="about-page bg-white text-blue-500 min-h-screen py-20 px-8">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h1 className="text-4xl font-bold uppercase">About Us</h1>
         <p className="mt-4 text-lg text-gray-600">
