@@ -3,10 +3,10 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaTwitter, FaInsta
 
 const Contacts = () => {
   return (
-    <div className="contact-page bg-blue-500 text-white min-h-screen py-16 px-8">
+    <div className="contact-page text-white min-h-screen py-20 px-8">
       {/* Page Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold uppercase">Contact Us</h1>
+      <div className="text-center mb-12 mt-10">
+        <h1 className="text-4xl font-bold uppercase text-blue-500">Contact Us</h1>
         <p className="mt-4 text-lg opacity-90">
           We’d love to hear from you! Feel free to reach out with your questions or prayer requests.
         </p>
@@ -29,7 +29,7 @@ const Contacts = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="info w-full md:w-1/2 space-y-6">
+        <div className="info w-full md:w-1/2 space-y-6 text-blue-500 shadow-xl p-10">
           <div>
             <h2 className="text-2xl font-semibold mb-2">Get In Touch</h2>
             <p className="opacity-90">
@@ -57,7 +57,7 @@ const Contacts = () => {
             <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-white text-blue-500 rounded-full flex items-center justify-center hover:bg-gray-200"
+                className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center hover:bg-gray-200"
               >
                <a href="https://www.facebook.com/CGMiNkpoluRumuigbo?mibextid=ZbWKwL"> <FaFacebookF /></a>
               </a>

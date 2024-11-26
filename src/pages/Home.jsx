@@ -75,7 +75,7 @@ const Home = () =>  {
       </div>
 
       {/* map section */}
-      <div ref={mapRef} className='mapContainer'>
+      <div ref={mapRef} className='mapContainer p-6'>
         <MapSection />
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const boxRefs = useRef([]);
@@ -57,7 +58,7 @@ const About = () => {
         >
           <h2 className="text-xl font-bold mb-4">Find Us</h2>
           <p className="text-gray-600">
-            Visit us at 123 Church Street, Faith City, FG 56789, or connect with us through our contact page. We look forward to meeting you!
+            Visit us at VXFM+4G8, Ohia-Rumuoke Nkpolu-, Otu Nda Street, Rumuigbo, Port Harcourt, or connect with us through our <Link to={'/contact'} className='contactLink text-blue-300'>contact page</Link> . We look forward to meeting you!
           </p>
         </div>
       </div>
