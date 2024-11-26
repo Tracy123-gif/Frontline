@@ -60,7 +60,7 @@ const Home = () =>  {
         <div className="textContent relative -top-11 flex flex-col justify-center items-center h-full gap-10 relatvive z-50">
           <h1 className='text-6xl font-bold text-white opacity-85 text-center max-sm:text-5xl '>The Frontline Church</h1>
           <p className='w-1/2 mx-auto text-center text-white max-sm:text-base '>
-           Evangelizing for the lost fro the total transformation of the spirit, sould and body, developing them into leaders
+           Evangelizing for the lost for the total transformation of the spirit, soul and body, developing them into leaders
           </p>
         </div>
       </div>
